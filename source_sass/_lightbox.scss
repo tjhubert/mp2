@@ -31,11 +31,11 @@
     width: 100px;
     height: 100px;
     z-index:1003;
-    background: url("/data/images/cross_white.png") center center no-repeat;
+    background: url("../data/images/cross_white.png") center center no-repeat;
     @include transition(background-image 0.1s);
     &:hover{
       cursor: pointer;
-      background-image: url("/data/images/cross_grey.png");
+      background-image: url("../data/images/cross_grey.png");
     }
   }
   #lightbox-content {

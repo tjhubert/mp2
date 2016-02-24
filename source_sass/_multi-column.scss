@@ -32,6 +32,9 @@
       transform: rotateY(180deg);
       -webkit-transform:rotateY(180deg); /* Safari and Chrome */
       -moz-transform:rotateY(180deg); /* Firefox */
+      
+      filter: grayscale(1) brightness(1.5) contrast(10);
+      -moz-filter: grayscale(1) brightness(1.5) contrast(10);
       -webkit-filter: grayscale(1) brightness(1.5) contrast(10);
     }
   }

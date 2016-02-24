@@ -51,25 +51,30 @@
     else {
         navigator.getMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia);
 
-        navigator.getMedia(
-            // constraints
-            {video:true, audio:false},
+        if (navigator.getMedia) {
+            navigator.getMedia(
+                // constraints
+                {video:true, audio:false},
 
-            // success callback
-            function (mediaStream) {
-                appendImageVideoElems();
-                var videos = document.getElementsByClassName('column-webcam');
-                Array.prototype.forEach.call(videos, function(video){
-                    video.src = window.URL.createObjectURL(mediaStream);
-                    video.play();
+                // success callback
+                function (mediaStream) {
+                    appendImageVideoElems();
+                    var videos = document.getElementsByClassName('column-webcam');
+                    Array.prototype.forEach.call(videos, function(video){
+                        video.src = window.URL.createObjectURL(mediaStream);
+                        video.play();
+                    });
+                },   
+                //handle error
+                function (error) {
+                    failGetWebcam = true;
+                    console.log(error);
+                    appendImageVideoElems();
                 });
-            },   
-            //handle error
-            function (error) {
-                failGetWebcam = true;
-                console.log(error);
-                appendImageVideoElems();
-            });
+        } else {
+            failGetWebcam = true;
+            appendImageVideoElems();
+        }
     }
 
 
