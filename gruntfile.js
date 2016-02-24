@@ -13,7 +13,7 @@ module.exports = function(grunt) {
           mangle: false
         },
         files: {
-          'public/js/script.js': ['source_js/script.js'],
+          'public/js/script.js': ['source_js/*.js'],
         } //files
       } //my_target
     }, //uglify
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
       scripts: {
         files: ['source_js/*.js'],
         tasks: ['clean','uglify'],
-        //tasks: ['copy']
+        // tasks: ['copy']
       }, //script
       sass: {
         files: ['source_sass/*.scss'],
@@ -78,5 +78,8 @@ module.exports = function(grunt) {
       }
   }
   }) //initConfig
+  // grunt.registerTask('serve', ['express:dev', 'watch']);
+  // grunt.registerTask('default', ['uglify', 'compass:dev', 'serve']);
+
   grunt.registerTask('default', ['express:dev', 'watch', 'uglify']);
 } //exports

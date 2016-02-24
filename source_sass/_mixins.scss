@@ -1,1 +1,5 @@
 // Insert your mixins
+@mixin vertical-center($offsetY) {
+  top: 50%;
+  transform: translate(0%,-50% - $offsetY);
+}
