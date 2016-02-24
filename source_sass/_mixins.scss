@@ -3,3 +3,11 @@
   top: 50%;
   transform: translate(0%,-50% - $offsetY);
 }
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}

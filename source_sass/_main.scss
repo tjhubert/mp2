@@ -1,4 +1,9 @@
 body {
     background-color: $black;
     font-family: $font-primary;
+
+    video::-webkit-media-controls-start-playback-button {
+      display: none !important;
+      -webkit-appearance: none;
+    }
 }

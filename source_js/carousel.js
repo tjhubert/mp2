@@ -1,19 +1,19 @@
 (function() {    
     var carouselSlides = $('.carousel-slides');
     var carouselSpan = $('#span-repeat');
-    var currentCarouselIndex = 0;
+    var carouselArrowLeft = $('#arrow-carousel-left');
+    var isCarouselArrowLeftExist = true;
+    var currentCarouselIndex = 1;
     var oldIndex;
 
     function hideCarouselSlide(index) {
         $(carouselSlides[index])
-            .css("display", "none")
-            .removeClass("carousel-blue");
+            .css("display", "none");
     }
 
     function showCarouselSlide(index) {
         $(carouselSlides[index])
-            .css("display", "block")
-            .addClass("carousel-blue");
+            .css("display", "block");
     }
 
     $("#arrow-carousel-right").click(function(){
@@ -29,6 +29,11 @@
             showCarouselSlide(currentCarouselIndex);
         }
 
+        if (!isCarouselArrowLeftExist) {
+            carouselArrowLeft.removeClass("hide-arrow");
+            isCarouselArrowLeftExist = true;
+        }
+
     })
 
     $("#arrow-carousel-left").click(function(){
@@ -42,9 +47,14 @@
             currentCarouselIndex--;
             showCarouselSlide(currentCarouselIndex);
         }
+
+        if (currentCarouselIndex === 0) {
+            carouselArrowLeft.addClass("hide-arrow");
+            isCarouselArrowLeftExist = false;
+        }
     })
 
-    showCarouselSlide(0);
+    showCarouselSlide(1);
 
 })();
 

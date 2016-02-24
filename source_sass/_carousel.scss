@@ -1,6 +1,14 @@
 #carousel{
     width: 100%;
-    height: 400px;
+    @include media("<medium") {
+        height: 200px;
+      }
+      @include media(">=medium", "<large") {
+        height: 400px;
+      }
+      @include media(">=large") {
+        height: 500px;
+      }
     color: $white;
     #arrow-carousel-right{
       position: relative;
@@ -13,36 +21,65 @@
     .carousel-slides {
       display: none;
       position: relative;
-      height: 400px;
       overflow: hidden;
+      background-color: transparent;
+      color: $white;
+      @include media("<medium") {
+        height: 200px;
+      }
+      @include media(">=medium", "<large") {
+        height: 400px;
+      }
+      @include media(">=large") {
+        height: 500px;
+      }
       .carousel-content {
         font-style: italic;
-        font-weight: 100;
         text-align: right;
-        font-size: 3em;
         overflow: hidden;
-        /*http://stackoverflow.com/questions/3922739/limit-text-length-to-n-lines-using-css*/
-        /*&:before {
-          content:                    '...';
-          text-align:                 right;
-          position:                   absolute;
-          display:                    block;
-          width:                      2em;
-          height:                     1em;
-          bottom:                     1em;
-          right:                      20px;
-          background: -moz-linear-gradient(left,  rgba(224,224,224,0) 0%, rgba(224,224,224,1) 38%, rgba(224,224,224,1) 99%);
-          background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(224,224,224,0)), color-stop(38%,rgba(224,224,224,1)), color-stop(99%,rgba(224,224,224,1)));
-          background: -webkit-linear-gradient(left,  rgba(224,224,224,0) 0%,rgba(224,224,224,1) 38%,rgba(224,224,224,1) 99%);
-          background: -o-linear-gradient(left,  rgba(224,224,224,0) 0%,rgba(224,224,224,1) 38%,rgba(224,224,224,1) 99%);
-          background: -ms-linear-gradient(left,  rgba(224,224,224,0) 0%,rgba(224,224,224,1) 38%,rgba(224,224,224,1) 99%);
-          background: linear-gradient(to right,  rgba(224,224,224,0) 0%,rgba(224,224,224,1) 38%,rgba(224,224,224,1) 99%);
-          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e0e0e0', endColorstr='#e0e0e0',GradientType=1 );
-        }*/
+        position: relative;
+        @include vertical-center(0%);
+        @include media("<medium") {
+          font-size: 1.2em;
+          font-weight: 600;
+        }
+        @include media(">=medium", "<large") {
+          font-weight: 300;
+          font-size: 2.5em;
+        }
+        @include media(">=large") {
+          font-weight: 300;
+          font-size: 3em;
+        }
       }
     }
-    .carousel-blue {
-      background-color: blue;
-      color: $white;
+    img {
+      position: fixed;
+      @include media("<medium") {
+        top: 15%;
+      }
+      @include media(">=medium", "<large") {
+        top: -50%;
+      }
+      @include media(">=large") {
+        top: -15%;
+      }
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 0 auto;
+      z-index: -10;
+    }
+    .arrow-carousel{
+      @include transition(color 0.2s);
+      &:hover{
+        cursor:pointer;
+        color: gray;
+      }
+    }
+    #arrow-carousel-right{
+      text-align: right;
+    }
+    .hide-arrow {
+      visibility: hidden;
     }
 }

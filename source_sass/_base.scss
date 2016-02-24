@@ -1,9 +1,11 @@
 // Add any custom Sass & CSS here
-@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,100italic);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:600italic,300italic);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700);
-/*@import url(https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic);*/
+
 @import "media";
 @import "main";
 @import "intro";
 @import "carousel";
 @import "multi-column";
+@import "modal";
+@import "lightbox";

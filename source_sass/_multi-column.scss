@@ -2,12 +2,37 @@
   div {
     padding-left: 0;
     padding-right: 0;
+    position: relative;
+    .video-filter {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      /*height: 100%;*/
+      height: 100%;
+      z-index: 2;
+    }
+    .filter-blue {
+      background-color: rgba(0,0,255,.7);
+    }
+    .filter-green {
+      background-color: rgba(0,255,0,.7);
+    }
+    .filter-red {
+      background-color: rgba(255,0,0,.7);
+    }
+    .filter-yellow {
+      background-color: rgba(255,255,0,.7);
+    }
     video {
       width: 100%;
+      display: inline-block;
+      margin:0;
+      padding: 0;
       height: auto;
       transform: rotateY(180deg);
       -webkit-transform:rotateY(180deg); /* Safari and Chrome */
       -moz-transform:rotateY(180deg); /* Firefox */
+      -webkit-filter: grayscale(1) brightness(1.5) contrast(10);
     }
   }
 }
