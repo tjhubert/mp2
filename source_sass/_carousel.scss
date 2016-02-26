@@ -70,6 +70,7 @@
       z-index: -10;
     }
     .arrow-carousel{
+      font-family: serif;
       @include transition(color 0.2s);
       &:hover{
         cursor:pointer;

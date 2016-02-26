@@ -3,6 +3,7 @@
     padding-left: 0;
     padding-right: 0;
     position: relative;
+    background-color: black;
     .video-filter {
       position: absolute;
       top: 0;
@@ -11,17 +12,17 @@
       height: 100%;
       z-index: 2;
     }
-    .filter-blue {
-      background-color: rgba(0,0,255,.7);
+    .filter-purple {
+      background-color: rgba(116,74,124,.8);
     }
     .filter-green {
-      background-color: rgba(0,255,0,.7);
+      background-color: rgba(0,60,0,.8);
     }
     .filter-red {
-      background-color: rgba(255,0,0,.7);
+      background-color: rgba(200,0,60,.8);
     }
     .filter-yellow {
-      background-color: rgba(255,255,0,.7);
+      background-color: rgba(210,120,0,.8);
     }
     video {
       width: 100%;
@@ -32,10 +33,11 @@
       transform: rotateY(180deg);
       -webkit-transform:rotateY(180deg); /* Safari and Chrome */
       -moz-transform:rotateY(180deg); /* Firefox */
-      
-      filter: grayscale(1) brightness(1.5) contrast(10);
-      -moz-filter: grayscale(1) brightness(1.5) contrast(10);
-      -webkit-filter: grayscale(1) brightness(1.5) contrast(10);
+    }
+    .filter-overlay {
+      filter: grayscale(1) brightness(1.4) contrast(10);
+      -moz-filter: grayscale(1) brightness(1.4) contrast(10);
+      -webkit-filter: grayscale(1) brightness(1.4) contrast(10);
     }
   }
 }
