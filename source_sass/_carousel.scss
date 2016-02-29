@@ -10,14 +10,6 @@
         height: 500px;
       }
     color: $white;
-    #arrow-carousel-right{
-      position: relative;
-      @include vertical-center(0%);
-    }
-    #arrow-carousel-left{
-      position: relative;
-      @include vertical-center(50%);
-    }
     .carousel-slides {
       display: none;
       position: relative;
@@ -70,16 +62,20 @@
       z-index: -10;
     }
     .arrow-carousel{
-      font-family: serif;
+      font-size: 2em;
+      @include media("<medium") {
+        font-size: 1.5em;
+      }
+      text-align: center;
+      position: relative;
+      @include vertical-center(0%);
       @include transition(color 0.2s);
       &:hover{
         cursor:pointer;
         color: gray;
       }
     }
-    #arrow-carousel-right{
-      text-align: right;
-    }
+    
     .hide-arrow {
       visibility: hidden;
     }

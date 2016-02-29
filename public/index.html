@@ -14,14 +14,35 @@
 </head>
 
 <body>
-<!--   <nav class="top-bar">
-    <div class="top-bar-left">
-      <ul class="dropdown menu" data-dropdown-menu>
-        <li class="menu-text">MP2</li>
-        <li><a href="https://courses.engr.illinois.edu/cs498rk1/">Web Page</a></li>
+
+<div id="navbar">
+  <div class="title-bar" data-responsive-toggle="mobile-menu" data-hide-for="medium">
+      <button class="menu-icon" type="button" data-toggle></button>
+  </div>
+
+  <div class="show-for-small-only top-bar" id="mobile-menu">
+    <div class="top-bar-right">
+      <ul class="dropdown vertical menu">
+        <li class="mobile-navbar-links"><a href="#">portrait</a></li>
+        <li class="mobile-navbar-links"><a href="#">quote</a></li>
+        <li class="mobile-navbar-links"><a href="#">works</a></li>
       </ul>
     </div>
-  </nav> -->
+  </div>
+
+  <div class="hide-for-small-only top-bar" id="desktop-menu">
+    <div class="top-bar-right">
+      <ul class="dropdown vertical medium-horizontal menu">
+        <li class="desktop-navbar-links"><a href="#">portrait</a></li>
+        <li class="desktop-navbar-links"><a href="#">quote</a></li>
+        <li class="desktop-navbar-links"><a href="#">works</a></li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
 	
 <!-- INTRO VIDEO -->
 
@@ -217,7 +238,7 @@
     <img id="background-image" src="./data/images/warhol_self.png"/>
     
     <div class="columns small-1 arrow-carousel" id="arrow-carousel-left">
-      &#x25C0; <!-- left trianglet ascii code -->
+      <i class="fa fa-caret-left"></i>
     </div>
 
     <div class="columns small-10 carousel-slides">
@@ -239,7 +260,7 @@
     </div>
 
     <div class="columns small-1 arrow-carousel" id="arrow-carousel-right">
-      &#x25B6; <!-- right triangle ascii code -->
+      <i class="fa fa-caret-right"></i>
     </div>
 
   </div>
@@ -357,7 +378,7 @@
     </a>
 
     <div class="columns small-12 footer-signature">
-      designed and developed with <i class="fa fa-heart-o"></i> by <a href="//tjhubert.com" target="_black">tjhubert</a>
+      designed and developed with <i class="fa fa-heart-o"></i> by <a href="//hubart.github.io" target="_black">tjhubert</a>
     </div>
 
     <!-- <div id="footer-margin-left">

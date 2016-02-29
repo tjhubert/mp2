@@ -27,6 +27,9 @@
             },   
             //handle error
             function (error) {
+                if (error.name === "PermissionDeniedError") {
+                    alert("You denied webcam access. Booo!!! Not cool. Allow webcam access and refresh the page.");
+                }
                 console.log(error);
             });
         

@@ -11,6 +11,7 @@
     color: $white;
     opacity: 0.8;
     z-index: 1;
+    font-weight: 700;
     @include media("<medium") {
       font-size: 6em;
     }
@@ -38,6 +39,9 @@
     position: relative;
     margin-bottom: 0;
     z-index: -1;
+  }
+  img {
+    width: 100%;
   }
   .show-for-xlarge{
     @include media("<1400px") {
