@@ -28,7 +28,6 @@
     }
   }
   .video-container {
-    /*opacity: 0.5;*/
     -webkit-transform: translate3d(0,0,0);
     z-index: 0;
     padding-left: 0;
@@ -42,6 +41,11 @@
   }
   img {
     width: 100%;
+  }
+  img, video {
+    /*trick computers to use GPU instead to render GIF*/
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
   }
   .show-for-xlarge{
     @include media("<1400px") {
