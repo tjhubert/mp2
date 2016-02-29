@@ -32,12 +32,18 @@
         a{
           color: black;
           @include transition(color 0.1s);
-          &:hover {
-            color: rgb(130, 130, 130);
-          }
+          
         }
         &.navbar-active {
           @include box-shadow(inset 0px -2px 0px 0px black);
+        }
+        &:hover {
+          &.navbar-active {
+            @include box-shadow(inset 0px -2px 0px 0px rgb(130, 130, 130));
+          }
+          a {
+            color: rgb(130, 130, 130);
+          }
         }
         
       }
